@@ -12,7 +12,7 @@
 <meta property="og:description" content="اشحن شدات UC وجواهر ونقاط كل الألعاب بأسعار الجملة · 9 لغات · 58 دولة · شحن تلقائي.">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="style.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -203,5 +203,16 @@
 <script src="assets/js/chrome.js"></script>
 <script src="assets/js/app.js"></script>
 <script src="assets/js/home.js"></script>
+<script>
+/* فحص صامت (في الـ Console فقط): يتأكد إن ملفات الموقع حمّلت فعلًا — مفيش أي رسالة ظاهرة */
+window.addEventListener('load', function () {
+  window.setTimeout(function () {
+    var grid = document.getElementById('games-grid');
+    if (!window.SHN || !grid || !grid.children.length) {
+      console.warn('[Shahnly] ملفات الموقع (assets) مش بتحمّل — تأكد إن فولدر assets موجود جانب index.html');
+    }
+  }, 1200);
+});
+</script>
 </body>
 </html>
