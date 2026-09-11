@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title="home.title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شحنلي | شحن ببجي وفري فاير وجميع الألعاب — تسليم فوري</title>
+<meta name="description" content="متجر شحن الألعاب: شدات UC وجواهر ونقاط كل الألعاب بأسعار الجملة · دفع فوري أو تحويل بنكي · 9 لغات · 58 دولة · شحن تلقائي وتتبع كامل.">
+<meta name="theme-color" content="#070911">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="شحنلي | Shahnly">
+<meta property="og:title" content="شحنلي — متجر شحن الألعاب بتسليم فوري">
+<meta property="og:description" content="اشحن شدات UC وجواهر ونقاط كل الألعاب بأسعار الجملة · 9 لغات · 58 دولة · شحن تلقائي.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "OnlineStore",
+  "name": "شحنلي",
+  "alternateName": "Shahnly",
+  "description": "متجر تجريبي لشحن الألعاب: شدات UC وجواهر ونقاط بأسعار الجملة مع شحن تلقائي وتتبع كامل للأوردر.",
+  "availableLanguage": ["ar","en","fr","de","es","it","pt","tr","ru"],
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "شحن PUBG Mobile (UC)" }, "priceCurrency": "EGP", "price": "25" },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "شحن Free Fire (جواهر)" }, "priceCurrency": "EGP", "price": "30" }
+  ]
+}
+</script>
+</head>
+<body>
+
+<div id="site-chrome"></div>
+
+<main id="main">
+
+  <!-- ============ السلايدر ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="slider" id="hero-slider">
+        <div class="slides" id="slides"></div>
+        <button class="slider-arrow prev" id="slide-prev" aria-label="السابق">‹</button>
+        <button class="slider-arrow next" id="slide-next" aria-label="التالي">›</button>
+        <div class="slider-dots" id="slide-dots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ شريط المتجر الرسمي ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="row" style="justify-content:space-between;gap:14px;flex-wrap:wrap">
+        <div>
+          <span class="badge badge-accent" data-i18n="s.official"></span>
+          <p class="muted" style="margin:8px 0 0;font-size:.9rem" data-i18n="s.officialSub"></p>
+        </div>
+        <div class="row">
+          <a class="btn btn-primary" href="#games" data-i18n="sg.title"></a>
+          <a class="btn btn-ghost" data-wa href="#" data-i18n="ss.cta"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ كل الألعاب ============ -->
+  <section class="section section--tight" id="games">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="sg.title"></h2>
+          <p data-i18n="sg.sub"></p>
+        </div>
+        <span class="chip" data-i18n="games.chip"></span>
+      </div>
+      <div class="cat-bar" id="cat-bar"></div>
+      <div class="grid grid-3" id="games-grid"></div>
+      <div class="row" style="justify-content:center;margin-top:20px">
+        <button class="btn btn-ghost" id="load-more" data-i18n="sg.loadMore"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ ألعاب مصغرة ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="mg.title"></h2>
+          <p data-i18n="mg.sub"></p>
+        </div>
+      </div>
+      <div class="mini-grid" id="mini-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ أوفر العروض ============ -->
+  <section class="section section--tight" id="deals">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="deals.title"></h2>
+          <p data-i18n="deals.sub"></p>
+        </div>
+      </div>
+      <div class="grid grid-4" id="deals-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ فيديو ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <div><h2 data-i18n="sv.title"></h2></div>
+        <a class="btn btn-ghost btn-sm" href="live.html" data-i18n="sv.showAll"></a>
+      </div>
+      <div class="video-grid" id="video-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ الأخبار والأحداث ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <div><h2 data-i18n="sn.title"></h2></div>
+        <div class="row" id="news-filter"></div>
+      </div>
+      <div class="news-grid" id="news-grid"></div>
+      <div class="row" style="justify-content:center;margin-top:18px">
+        <a class="btn btn-ghost" href="news.html" data-i18n="sn.seeAll"></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ الدول واللغات ============ -->
+  <section class="section" id="countries">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="co.title"></h2>
+          <p data-i18n="co.sub"></p>
+        </div>
+        <span class="chip" data-i18n="co.chip"></span>
+      </div>
+      <div class="row" style="margin-bottom:18px" id="co-tabs"></div>
+      <div class="co-grid" id="co-grid"></div>
+      <div class="divider"></div>
+      <h3 style="font-size:1.05rem" data-i18n="ui.lang"></h3>
+      <div class="co-langs" id="co-langs"></div>
+    </div>
+  </section>
+
+  <!-- ============ حول المتجر + الأرقام ============ -->
+  <section class="section section--tight" id="about">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="sb.title"></h2>
+          <p data-i18n="sb.lead"></p>
+        </div>
+      </div>
+      <div class="about-grid" id="about-grid"></div>
+      <div class="stat-grid" id="stat-grid" style="margin-top:20px"></div>
+    </div>
+  </section>
+
+  <!-- ============ شركاء الدفع ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <h2 data-i18n="sp.title"></h2>
+          <p data-i18n="sp.sub"></p>
+        </div>
+      </div>
+      <div class="partner-grid" id="partner-grid"></div>
+    </div>
+  </section>
+
+  <!-- ============ خدمة الزبائن ============ -->
+  <section class="section section--tight">
+    <div class="container">
+      <div class="support-band">
+        <div style="flex:1;min-width:240px">
+          <h2 style="margin:0 0 8px;font-size:1.25rem" data-i18n="ss.title"></h2>
+          <p class="muted" style="margin:0" data-i18n="ss.desc"></p>
+        </div>
+        <div class="row">
+          <a class="btn btn-accent btn-lg" data-wa href="#" data-i18n="ss.cta"></a>
+          <a class="btn btn-ghost btn-lg" href="help.html" data-i18n="nav.help"></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/countries.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/home.js"></script>
+</body>
+</html>

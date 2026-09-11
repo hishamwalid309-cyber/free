@@ -1,0 +1,20 @@
+# =========================================================
+# شحنلي | Shahnly — هيدرات أمان للموقع المنشور (Netlify)
+# ملاحظة: مفيش Content-Security-Policy هنا بشكل مقصود، عشان الموقع
+# بيستخدم سكربتات وأنماط داخلية — لو ضفت CSP لازم تختبر الموقع كله بعدها.
+# =========================================================
+
+/*
+  X-Frame-Options: SAMEORIGIN
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+  Permissions-Policy: geolocation=(), microphone=(), camera=(), payment=()
+  X-XSS-Protection: 1; mode=block
+
+# الملفات الثابتة (CSS/JS) تتخزن عند الزائر لمدة أسبوع
+/assets/*
+  Cache-Control: public, max-age=604800, stale-while-revalidate=86400
+
+# صفحات HTML من غير تخزين عشان أي تعديل يظهر فورًا
+/*.html
+  Cache-Control: public, max-age=0, must-revalidate

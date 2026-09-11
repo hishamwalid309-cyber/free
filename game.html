@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>شحن اللعبة | شحنلي</title>
+<meta name="description" content="اختار الباقة واكتب آيدي اللاعب وادفع بالفيزا أو بتحويل بنكي — تسليم فوري.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-chrome"></div>
+
+<main class="section" id="game-main">
+  <div class="container">
+
+    <div class="steps">
+      <span class="step is-active"><i>1</i> <span data-i18n="gp.step1">اختيار الباقة وبيانات اللاعب</span></span>
+      <span class="step"><i>2</i> <span data-i18n="gp.step2">الدفع</span></span>
+      <span class="step"><i>3</i> <span data-i18n="gp.step3">التسليم</span></span>
+    </div>
+
+    <div class="layout-2">
+      <div>
+        <!-- كارت اللعبة -->
+        <div class="card" id="game-header"></div>
+
+        <!-- الباقات -->
+        <div class="card" style="margin-top:20px">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="gp.choosePkg">اختار الباقة</span></div>
+          <div class="pkg-grid" id="pkg-grid"></div>
+          <div class="error-msg" id="pkg-error" style="margin-top:12px" data-i18n="gp.err.pkg">اختار باقة الأول.</div>
+        </div>
+
+        <!-- بيانات اللاعب -->
+        <div class="card" style="margin-top:20px">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="gp.playerData">بيانات اللاعب</span></div>
+          <div id="player-fields"></div>
+          <div class="notice notice-info" id="game-note" style="margin-top:6px"></div>
+        </div>
+
+        <div class="notice notice-warn" style="margin-top:20px">
+          <strong data-i18n="gp.sec.t">🔒 ملاحظة أمان</strong>
+          <span data-i18n="gp.sec.d">إحنا مش بنطلب باسورد الحساب أو كود التحقق (OTP) نهائيًا. أي حد يطلب منك البيانات دي بيحاول يخترق حسابك — بلّغنا فورًا.</span>
+        </div>
+      </div>
+
+      <!-- ملخص الطلب -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="gp.summary">ملخص الطلب</span></div>
+          <div class="summary-list" id="summary"></div>
+          <div class="summary-total">
+            <span data-i18n="gp.total">الإجمالي</span>
+            <b id="total">—</b>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" id="btn-continue" style="margin-top:18px" data-i18n="gp.continue">متابعة للدفع ←</button>
+          <p class="muted" style="font-size:.78rem;margin:12px 0 0">
+            <span data-i18n="gp.agree">بالضغط على الزر أنت موافق على</span> <a href="faq.html" style="color:var(--primary-2)" data-i18n="gp.terms">شروط الاستخدام</a>.
+          </p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="kv">
+            <div><span data-i18n="gp.side.delivery">طريقة التسليم</span><b data-i18n="gp.side.deliveryVal">شحن مباشر على الآيدي</b></div>
+            <div><span data-i18n="gp.side.data">بيانات مطلوبة</span><b data-i18n="gp.side.dataVal">آيدي اللاعب فقط</b></div>
+            <div><span data-i18n="gp.side.refund">استرجاع</span><b data-i18n="gp.side.refundVal">لو الآيدي غلط</b></div>
+            <div><span data-i18n="gp.side.support">الدعم</span><b data-i18n="gp.side.supportVal">واتساب 24/7</b></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/countries.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/game.js"></script>
+</body>
+</html>

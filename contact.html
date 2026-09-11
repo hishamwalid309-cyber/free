@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title="cn.title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تواصل معنا | شحنلي</title>
+<meta name="description" content="كلّمنا على واتساب أو تليجرام أو ابعتلنا رسالة — الدعم متاح طول اليوم.">
+<meta name="theme-color" content="#070911">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-chrome"></div>
+
+<main class="section" id="main">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h1 style="font-size:1.7rem" data-i18n="cn.title"></h1>
+        <p data-i18n="cn.sub"></p>
+      </div>
+      <span class="chip" data-i18n="cn.chip"></span>
+    </div>
+
+    <div class="grid grid-4">
+      <div class="card reveal"><div class="feature"><span class="ico">💬</span><div>
+        <h4 data-i18n="cn.waT"></h4><p data-i18n="cn.waD"></p>
+        <a class="btn btn-accent btn-sm" data-wa href="#" style="margin-top:8px" data-i18n="cn.waBtn"></a>
+      </div></div></div>
+      <div class="card reveal"><div class="feature"><span class="ico">✈️</span><div>
+        <h4 data-i18n="cn.tgT"></h4><p data-i18n="cn.tgD"></p>
+        <a class="btn btn-ghost btn-sm" data-tg href="#" style="margin-top:8px" data-i18n="cn.tgBtn"></a>
+      </div></div></div>
+      <div class="card reveal"><div class="feature"><span class="ico">✉️</span><div>
+        <h4 data-i18n="cn.mailT"></h4><p data-i18n="cn.mailD"></p>
+        <a class="btn btn-ghost btn-sm" id="cn-mailto" href="#" style="margin-top:8px" data-i18n="cn.mailBtn"></a>
+      </div></div></div>
+      <div class="card reveal"><div class="feature"><span class="ico">🕒</span><div>
+        <h4 data-i18n="cn.hoursT"></h4><p data-i18n="cn.hoursD"></p>
+        <span class="badge badge-accent" style="margin-top:8px" data-i18n="cn.hoursV"></span>
+      </div></div></div>
+    </div>
+
+    <div class="layout-2" style="margin-top:26px">
+      <div class="card card-pad-lg">
+        <div class="card-title"><span class="dot"></span> <span data-i18n="cn.formT"></span></div>
+        <div class="field-row">
+          <div class="field">
+            <label for="cn-name" data-i18n="ck.name"></label>
+            <input class="input" id="cn-name" autocomplete="name" data-i18n-ph="ck.namePh">
+            <div class="error-msg"></div>
+          </div>
+          <div class="field">
+            <label for="cn-phone" data-i18n="cn.phoneOpt"></label>
+            <input class="input" id="cn-phone" type="tel" dir="ltr" placeholder="01012345678">
+            <div class="error-msg"></div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="cn-email" data-i18n="ck.email"></label>
+          <input class="input" id="cn-email" type="email" dir="ltr" placeholder="name@example.com">
+          <div class="error-msg"></div>
+        </div>
+        <div class="field">
+          <label for="cn-subject" data-i18n="cn.subject"></label>
+          <select class="select" id="cn-subject">
+            <option value="order" data-i18n="cn.sOrder"></option>
+            <option value="payment" data-i18n="cn.sPay"></option>
+            <option value="other" data-i18n="cn.sOther"></option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="cn-msg" data-i18n="cn.message"></label>
+          <textarea class="input" id="cn-msg" rows="5" data-i18n-ph="cn.messagePh"></textarea>
+          <div class="error-msg"></div>
+        </div>
+        <button class="btn btn-primary btn-lg btn-block" id="cn-send" data-i18n="cn.send"></button>
+        <p class="muted" style="font-size:.78rem;margin:12px 0 0" data-i18n="cn.sendNote"></p>
+      </div>
+
+      <aside class="sidebar">
+        <div class="card">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="cn.reach"></span></div>
+          <div class="kv">
+            <div><span data-i18n="footer.contact"></span><b data-phone>+20 100 123 4567</b></div>
+            <div><span>Email</span><b data-email>support@shahnly.demo</b></div>
+            <div><span data-i18n="cn.address"></span><b data-address>القاهرة، مصر</b></div>
+          </div>
+          <div class="divider"></div>
+          <p class="muted" style="font-size:.82rem;margin:0" data-i18n="cn.waNote"></p>
+          <a class="btn btn-accent btn-block" data-wa href="#" style="margin-top:12px" data-i18n="cta.wa"></a>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="cn.quick"></span></div>
+          <a class="btn btn-ghost btn-block" href="track.html" style="margin-bottom:8px" data-i18n="nav.track"></a>
+          <a class="btn btn-ghost btn-block" href="faq.html" data-i18n="nav.faq"></a>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/countries.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

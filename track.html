@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title="tr.title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تتبع الطلب | شحنلي</title>
+<meta name="description" content="اكتب رقم الأوردر لمتابعة حالة الشحن: تم الدفع، جاري الشحن، تم التسليم.">
+<meta name="theme-color" content="#070911">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-chrome"></div>
+
+<main class="section" id="main">
+  <div class="container">
+
+    <div class="card card-pad-lg" style="max-width:680px;margin-inline:auto">
+      <h1 style="font-size:1.5rem" data-i18n="tr.title"></h1>
+      <p class="muted" data-i18n="tr.sub"></p>
+
+      <div class="field-row" style="align-items:flex-end">
+        <div class="field" style="margin-bottom:0">
+          <label for="tr-id" data-i18n="tr.label"></label>
+          <input class="input" id="tr-id" dir="ltr" placeholder="SHN-260911-AB12" autocomplete="off" style="letter-spacing:1px">
+          <div class="hint" data-i18n="tr.hint"></div>
+          <div class="error-msg" id="tr-err"></div>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <button class="btn btn-primary btn-block btn-lg" id="tr-btn" data-i18n="tr.btn"></button>
+        </div>
+      </div>
+    </div>
+
+    <div style="max-width:680px;margin:26px auto 0">
+      <div class="section-head" style="margin-bottom:14px">
+        <h2 style="font-size:1.05rem" data-i18n="tr.recent"></h2>
+        <button class="btn btn-ghost btn-sm hidden" id="tr-clear" data-i18n="tr.clear"></button>
+      </div>
+      <div id="tr-list" class="stack-sm"></div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/countries.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/topup.js"></script>
+<script src="assets/js/track.js"></script>
+</body>
+</html>

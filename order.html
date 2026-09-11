@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title="or.title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>تفاصيل الأوردر | شحنلي</title>
+<meta name="description" content="تابع حالة أوردر الشحن لحظة بلحظة: الدفع، الشحن التلقائي، والتسليم.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070911">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-chrome"></div>
+
+<main class="section" id="main">
+  <div class="container">
+
+    <div class="card empty hidden" id="or-empty">
+      <div class="ico">🔍</div>
+      <h3 data-i18n="or.notFound"></h3>
+      <p data-i18n="or.notFoundD"></p>
+      <div class="row" style="justify-content:center">
+        <a class="btn btn-primary" href="track.html" data-i18n="or.track"></a>
+        <a class="btn btn-ghost" href="index.html#games" data-i18n="gp.nf.back"></a>
+      </div>
+    </div>
+
+    <div id="or-body" class="hidden">
+
+      <!-- رأس الأوردر -->
+      <div class="card card-pad-lg" id="or-head"></div>
+
+      <div class="layout-2" style="margin-top:20px">
+        <div>
+          <!-- خط الحالة -->
+          <div class="card">
+            <div class="card-title"><span class="dot"></span> <span data-i18n="or.timeline"></span></div>
+            <ul class="timeline" id="or-timeline"></ul>
+          </div>
+
+          <!-- الشحن التلقائي -->
+          <div class="card" style="margin-top:20px" id="or-topup-card">
+            <div class="card-title"><span class="dot"></span> <span data-i18n="or.topupTitle"></span></div>
+            <div class="topup-box">
+              <div class="progress-line"><i id="or-progress" style="width:5%"></i></div>
+              <div class="kv" style="margin-top:14px" id="or-topup-kv"></div>
+            </div>
+          </div>
+
+          <!-- تفاصيل الأوردر -->
+          <div class="card" style="margin-top:20px">
+            <div class="card-title"><span class="dot"></span> <span data-i18n="or.details"></span></div>
+            <div class="kv" id="or-details"></div>
+          </div>
+        </div>
+
+        <!-- جانبي -->
+        <aside class="sidebar">
+          <div class="card" id="or-status-card"></div>
+
+          <div class="card" style="margin-top:16px">
+            <div class="card-title"><span class="dot"></span> <span data-i18n="or.help"></span></div>
+            <p class="muted" style="font-size:.85rem" data-i18n="or.helpD"></p>
+            <a class="btn btn-accent btn-block" id="or-wa" data-wa href="#" data-i18n="cta.wa"></a>
+            <a class="btn btn-ghost btn-block" href="faq.html" style="margin-top:10px" data-i18n="nav.faq"></a>
+          </div>
+
+          <div class="card" style="margin-top:16px">
+            <button class="btn btn-ghost btn-block" id="or-print" data-i18n="or.print"></button>
+            <a class="btn btn-primary btn-block" href="index.html#games" style="margin-top:10px" data-i18n="or.new"></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/countries.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/topup.js"></script>
+<script src="assets/js/order.js"></script>
+</body>
+</html>

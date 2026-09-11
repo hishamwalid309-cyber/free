@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title="ck.title">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>إتمام الدفع | شحنلي</title>
+<meta name="description" content="أكمل دفعك بأمان: بطاقة بنكية فورية، تحويل بنكي/إنستاباي، أو محفظة إلكترونية — والشحن يبدأ تلقائيًا.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070911">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-chrome"></div>
+
+<main class="section" id="main">
+  <div class="container">
+
+    <div class="steps" role="list">
+      <span class="step is-done" role="listitem"><i>✓</i> <span data-i18n="gp.step1"></span></span>
+      <span class="step is-active" role="listitem"><i>2</i> <span data-i18n="ck.stepPay"></span></span>
+      <span class="step" role="listitem"><i>3</i> <span data-i18n="gp.step3"></span></span>
+    </div>
+
+    <!-- لو مفيش أوردر في الطريق -->
+    <div class="card empty hidden" id="ck-empty">
+      <div class="ico">🧾</div>
+      <h3 data-i18n="ck.emptyT"></h3>
+      <p data-i18n="ck.emptyD"></p>
+      <a class="btn btn-primary" href="index.html#games" data-i18n="gp.nf.back"></a>
+    </div>
+
+    <div class="layout-2" id="ck-body">
+      <div>
+        <!-- 1) بيانات العميل -->
+        <div class="card card-pad-lg">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="ck.customer"></span></div>
+
+          <div class="field-row">
+            <div class="field">
+              <label for="ck-name" data-i18n="ck.name"></label>
+              <input class="input" id="ck-name" type="text" autocomplete="name" data-i18n-ph="ck.namePh">
+              <div class="error-msg"></div>
+            </div>
+            <div class="field">
+              <label for="ck-phone" data-i18n="ck.phone"></label>
+              <div class="phone-row">
+                <select class="select" id="ck-country" aria-label="Country"></select>
+                <input class="input" id="ck-phone" type="tel" inputmode="tel" autocomplete="tel" placeholder="01012345678">
+              </div>
+              <div class="hint" id="ck-phone-hint"></div>
+              <div class="error-msg"></div>
+            </div>
+          </div>
+
+          <div class="field" style="margin-bottom:0">
+            <label for="ck-email" data-i18n="ck.email"></label>
+            <input class="input" id="ck-email" type="email" autocomplete="email" placeholder="name@example.com" dir="ltr">
+            <div class="hint" data-i18n="ck.emailOpt"></div>
+            <div class="error-msg"></div>
+          </div>
+
+          <div class="notice notice-info" style="margin-top:16px">
+            <strong data-i18n="ck.trackT"></strong>
+            <span data-i18n="ck.trackD"></span>
+          </div>
+        </div>
+
+        <!-- 2) طريقة الدفع -->
+        <div class="card" style="margin-top:20px">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="ck.method"></span></div>
+          <div class="pay-methods" id="ck-methods" role="radiogroup"></div>
+          <div id="ck-panel" style="margin-top:18px"></div>
+          <div class="error-msg" id="ck-pay-error"></div>
+        </div>
+
+        <div class="notice notice-warn" style="margin-top:20px">
+          <strong data-i18n="gp.sec.t"></strong>
+          <span data-i18n="ck.secureNote"></span>
+        </div>
+      </div>
+
+      <!-- ملخص الطلب -->
+      <aside class="sidebar">
+        <div class="card">
+          <div class="card-title"><span class="dot"></span> <span data-i18n="gp.summary"></span></div>
+          <div class="kv" id="ck-summary"></div>
+          <div class="summary-total">
+            <span data-i18n="gp.total"></span>
+            <b id="ck-total">—</b>
+          </div>
+          <button class="btn btn-primary btn-block btn-lg" id="ck-pay" style="margin-top:18px" data-i18n="ck.payNow"></button>
+          <a class="btn btn-ghost btn-block" href="game.html" id="ck-back" style="margin-top:10px" data-i18n="ck.back"></a>
+          <p class="muted" style="font-size:.78rem;margin:12px 0 0">
+            <span data-i18n="gp.agree"></span>
+            <a href="faq.html" style="color:var(--primary-2)" data-i18n="gp.terms"></a>.
+          </p>
+          <p class="price-note" style="margin:10px 0 0" id="ck-rate-note"></p>
+        </div>
+
+        <div class="card" style="margin-top:16px">
+          <div class="kv">
+            <div><span data-i18n="gp.side.delivery"></span><b data-i18n="ck.deliveryVal"></b></div>
+            <div><span data-i18n="gp.side.data"></span><b data-i18n="gp.side.dataVal"></b></div>
+            <div><span data-i18n="gp.side.support"></span><b data-i18n="gp.side.supportVal"></b></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<!-- شاشة المعالجة -->
+<div class="overlay" id="ck-overlay" role="dialog" aria-modal="true" aria-live="assertive">
+  <div class="overlay-card" id="ck-overlay-card"></div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/countries.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/topup.js"></script>
+<script src="assets/js/checkout.js"></script>
+</body>
+</html>

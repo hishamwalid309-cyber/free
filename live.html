@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" data-title="nav.live">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>البث والفيديو | شحنلي</title>
+<meta name="description" content="فيديوهات وبث مباشر من المتجر والمجتمع: عروض، جوائز، ونصائح توفير على الشحن.">
+<meta name="theme-color" content="#070911">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<div id="site-chrome"></div>
+
+<main class="section" id="main">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <h1 style="font-size:1.7rem" data-i18n="nav.live"></h1>
+        <p data-i18n="lv.sub"></p>
+      </div>
+      <span class="badge badge-accent" data-i18n="lv.now"></span>
+    </div>
+
+    <div class="video-grid" id="video-list"></div>
+
+    <div class="support-band" style="margin-top:26px">
+      <div style="flex:1;min-width:240px">
+        <h2 style="margin:0 0 8px;font-size:1.2rem" data-i18n="cta.title"></h2>
+        <p class="muted" style="margin:0" data-i18n="cta.sub"></p>
+      </div>
+      <div class="row">
+        <a class="btn btn-primary btn-lg" href="index.html#games" data-i18n="cta.choose"></a>
+        <a class="btn btn-ghost btn-lg" href="news.html" data-i18n="nav.news"></a>
+      </div>
+    </div>
+  </div>
+</main>
+
+<div id="site-footer"></div>
+
+<div class="overlay" id="video-modal" role="dialog" aria-modal="true">
+  <div class="overlay-card" style="max-width:720px;text-align:start">
+    <button class="btn btn-ghost btn-sm" id="video-close" style="margin-inline-start:auto;display:block" data-i18n="lv.close"></button>
+    <div id="video-modal-body" style="margin-top:10px"></div>
+  </div>
+</div>
+
+<script src="assets/js/config.js"></script>
+<script src="assets/js/data.js"></script>
+<script src="assets/js/lang.js"></script>
+<script src="assets/js/i18n.js"></script>
+<script src="assets/js/countries.js"></script>
+<script src="assets/js/chrome.js"></script>
+<script src="assets/js/app.js"></script>
+<script src="assets/js/store.js"></script>
+</body>
+</html>

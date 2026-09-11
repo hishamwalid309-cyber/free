@@ -1,0 +1,9 @@
+# شحنلي | Shahnly
+User-agent: *
+Allow: /
+# صفحات داخلية لا تحتاج فهرسة
+Disallow: /checkout.html
+Disallow: /order.html
+
+# بعد نشر الموقع على دومينك، غيّر العنوان ده لدومينك الحقيقي:
+# Sitemap: https://your-domain.com/sitemap.xml
